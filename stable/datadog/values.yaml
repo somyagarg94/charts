@@ -1,4 +1,8 @@
 # Default values for datadog.
+rbac:
+  enabled: false
+  apiVersion: v1beta1
+
 image:
   repository: datadog/docker-dd-agent
   tag: latest

@@ -1,0 +1,14 @@
+{{ if .Values.rbac.enabled }}
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/{{ required "A valid .Values.rbac.apiVersion entry required!" .Values.rbac.apiVersion }}
+metadata:
+  name: {{ template "fullname" . }}
+subjects:
+- kind: ServiceAccount
+  name: {{ template "fullname" . }}
+  namespace: {{ .Release.Namespace }}
+roleRef:
+  kind: ClusterRole
+  name: view
+  apiGroup: rbac.authorization.k8s.io
+{{ end }}
