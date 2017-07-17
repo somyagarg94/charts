@@ -78,7 +78,7 @@ sumologic:
   ## Logic. The logs will still be sent to FluentD
   ## ref: http://rubular.com/
   ## ref: https://github.com/SumoLogic/fluentd-kubernetes-sumologic#options
-  # excludeHostRegex:
+  # excludeHostRegex: 
 
 
   ## A ruby regex for namespaces. All matching namespaces will be excluded
