@@ -1,3 +1,8 @@
+## Install default RBAC cluster role binding
+rbac:
+  enabled: false
+  apiVersion: v1beta1
+
 # Default values for sumologic-fluentd.
 image:
   name: sumologic/fluentd-kubernetes-sumologic
@@ -77,6 +82,13 @@ sumologic:
   ## ref: http://rubular.com/
   ## ref: https://github.com/SumoLogic/fluentd-kubernetes-sumologic#options
   excludeHostRegex: ""
+
+  ## A ruby regex for hosts. All matching hosts will be excluded from Sumo
+  ## Logic. The logs will still be sent to FluentD
+  ## ref: http://rubular.com/
+  ## ref: https://github.com/SumoLogic/fluentd-kubernetes-sumologic#options
+  # excludeHostRegex:
+
 
   ## A ruby regex for namespaces. All matching namespaces will be excluded
   ## from Sumo Logic. The logs will still be sent to FluentD
