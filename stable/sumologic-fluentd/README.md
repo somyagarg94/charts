@@ -63,6 +63,9 @@ The following tables lists the configurable parameters of the sumologic-fluentd 
 | `tolerations` | List of node taints to tolerate (requires Kubernetes >= 1.6) | `[]` |
 | `updateStrategy` | `OnDelete` or `RollingUpdate` (requires Kubernetes >= 1.6) | `OnDelete` |
 | `rbac.create` | Is Role Based Authentication enabled in the cluster | `false` |
+| `daemonset.podAnnotations` | Annotations to add to the DaemonSet's Pods | `nil` |
+| `daemonset.tolerations` | List of node taints to tolerate (requires Kubernetes >= 1.6) | `nil` |
+| `daemonset.updateStrategy` | `OnDelete` or `RollingUpdate` (requires Kubernetes >= 1.6) | `OnDelete` |
 | `sumologic.collectorUrl` | An HTTP collector in SumoLogic that the container can send logs to via HTTP | `Nil` You must provide your own |
 | `sumologic.fluentdSource` | The fluentd input source, `file` or `systemd` | `file` |
 | `sumologic.flushInterval` | How frequently to push logs to sumo, in seconds | `5` |
